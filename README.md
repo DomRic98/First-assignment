@@ -1,2 +1,2 @@
 # First-assignment
-Assignment #1 for the curse Computing Methods for Experimental physics and data analisis
+Assignment #1 for the course Computing Methods for Experimental physics and data analisis
