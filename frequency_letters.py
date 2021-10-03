@@ -39,10 +39,10 @@ df = df.loc[df['letter'].isin(
 
 print(df)
 
-# calculate the relative frequency of each letter
+# Calculate the relative frequency of each letter
 df['rel_freq'] = df['frequency'] / df['frequency'].sum()
 
-# sort alphabetically
+# Sort alphabetically
 df = df.sort_values('letter')
 
 print(df)
