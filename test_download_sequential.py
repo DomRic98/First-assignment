@@ -1,7 +1,7 @@
 import os
 import unittest
 from download_sequential import download
-
+import pytest
 
 class TestDownload(unittest.TestCase):
     def setUp(self):
