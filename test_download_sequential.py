@@ -5,26 +5,9 @@ import pytest
 
 class TestDownload(unittest.TestCase):
     def setUp(self):
-        self.url = "https://root.cern/files/HiggsTauTauReduced/"
         self.files_list = ["VBF_HToTauTau.root", "GluGluToHToTauTau.root"]
         self.files_dim = [24184554, 20460281]  # bytes
 
-    @pytest.mark.order1
-    def test_download_files(self):
-        """
-        Check on the name of the downloaded files compared to the expected one.
-
-        :return: If it passed ok, if it failed: "The files aren't the same".
-        """
-        print("TEST 1 - Called...")
-        result = []
-        call = 0
-        for file in self.files_list:
-            call += 1
-            result.append(download(self.url + file, call))
-        self.assertEqual(result, self.files_list, "The files aren't the same")
-
-    @pytest.mark.order2
     def test_download_dim(self):
         """
         Check on the size of the downloaded files compared to the expected one.
