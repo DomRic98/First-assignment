@@ -5,17 +5,6 @@ from collections import Counter
 import pandas
 import matplotlib.pyplot as plt
 
-
-"""
-A function just for me.
-
-    :param my_arg: The first of my arguments.
-    :param my_other_arg: The second of my arguments.
-
-    :returns: A message (just for me, of course).
-"""
-
-
 start = time.time()
 # Path variable contains the first command line argument passed
 path = sys.argv[1]
