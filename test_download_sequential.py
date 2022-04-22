@@ -9,6 +9,7 @@ class TestDownload(unittest.TestCase):
         self.files_list = ["VBF_HToTauTau.root", "GluGluToHToTauTau.root"]
         self.files_dim = [24184554, 20460281]  # bytes
 
+    @pytest.mark.dependency()
     def test_download_files(self):
         """
         Check on the name of the downloaded files compared to the expected one.
@@ -23,6 +24,7 @@ class TestDownload(unittest.TestCase):
             result.append(download(self.url + file, call))
         self.assertEqual(result, self.files_list, "The files aren't the same")
 
+    @pytest.mark.dependency(depends=['test_download_files'])
     def test_download_dim(self):
         """
         Check on the size of the downloaded files compared to the expected one.
